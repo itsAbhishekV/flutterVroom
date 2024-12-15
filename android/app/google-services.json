@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756704981978",
+    "project_id": "fluttervroom",
+    "storage_bucket": "fluttervroom.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756704981978:android:7ddce132ddbef133dc86e3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_vroom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNEWpNAhck7aYJJ6_J-EfYZqlLnvkxVqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
