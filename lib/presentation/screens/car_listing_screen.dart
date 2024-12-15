@@ -49,7 +49,11 @@ class _CarListingScreenState extends State<CarListingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          'Choose Car',
+        ),
+      ),
       body: ListView.builder(
         itemCount: cars.length,
         itemBuilder: (context, index) {

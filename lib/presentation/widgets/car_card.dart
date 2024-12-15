@@ -56,14 +56,20 @@ class CarCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.location_on_outlined),
+                        Icon(
+                          Icons.location_on_outlined,
+                          size: 16.0,
+                        ),
                         Text(' ${car.distance.toStringAsFixed(0)}km')
                       ],
                     ),
                     const Gap(8.0),
                     Row(
                       children: [
-                        Icon(Icons.local_gas_station),
+                        Icon(
+                          Icons.local_gas_station,
+                          size: 16.0,
+                        ),
                         Text(' ${car.fuelCapacity.toStringAsFixed(0)}L')
                       ],
                     ),
@@ -71,7 +77,9 @@ class CarCard extends StatelessWidget {
                 ),
                 Text(
                   '\$${car.pricePerHour.toStringAsFixed(2)}/h',
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(
+                    fontSize: 14.0,
+                  ),
                 )
               ],
             )
