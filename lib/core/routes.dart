@@ -1,4 +1,4 @@
-import 'package:flutter_vroom/onboarding_screen.dart';
+import 'package:flutter_vroom/presentation/exports.dart';
 import 'package:go_router/go_router.dart';
 
 final routes = GoRouter(
@@ -8,6 +8,11 @@ final routes = GoRouter(
       name: OnboardingScreen.routeName,
       path: OnboardingScreen.routePath,
       builder: (context, state) => OnboardingScreen(),
+    ),
+    GoRoute(
+      name: HomeScreen.routeName,
+      path: HomeScreen.routePath,
+      builder: (context, state) => HomeScreen(),
     ),
   ],
 );
