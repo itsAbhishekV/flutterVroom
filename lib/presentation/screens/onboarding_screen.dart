@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 
 class OnboardingScreen extends StatelessWidget {
   static const routeName = 'onboarding';
-  static const routePath = '/onboarding';
+  static const routePath = '/$routeName';
 
   const OnboardingScreen({super.key});
 
@@ -55,7 +55,9 @@ class OnboardingScreen extends StatelessWidget {
                     height: 54.0,
                     child: ElevatedButton(
                       onPressed: () {
-                        context.go(HomeScreen.routePath);
+                        context.go(
+                          HomeScreen.routePath,
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.black,
