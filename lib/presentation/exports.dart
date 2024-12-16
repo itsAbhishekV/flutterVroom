@@ -1,3 +1,5 @@
+export 'bloc/car_events.dart';
+export 'bloc/car_state.dart';
 export 'screens/car_details_screen.dart';
 export 'screens/car_listing_screen.dart';
 export 'screens/home_screen.dart';
