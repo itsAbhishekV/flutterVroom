@@ -74,7 +74,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen>
               pricePerHour: widget.car.pricePerHour,
             ),
           ),
-          Gap(24.0),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: Row(
@@ -119,7 +119,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen>
                       //todo - navigate
                     },
                     child: Container(
-                      height: 170.0,
+                      height: 180.0,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
@@ -146,18 +146,42 @@ class _CarDetailsScreenState extends State<CarDetailsScreen>
               ],
             ),
           ),
-          // Container(
-          //   padding: EdgeInsets.all(20),
-          //   child: Column(
-          //     children: [
-          //       MoreCard(car: Car(model: widget.car.model+"-1", distance: widget.car.distance+100, fuelCapacity: widget.car.fuelCapacity+100, pricePerHour: widget.car.pricePerHour+10)),
-          //       SizedBox(height: 5,),
-          //       MoreCard(car: Car(model: widget.car.model+"-2", distance: widget.car.distance+200, fuelCapacity: widget.car.fuelCapacity+200, pricePerHour: widget.car.pricePerHour+20)),
-          //       SizedBox(height: 5,),
-          //       MoreCard(car: Car(model: widget.car.model+"-3", distance: widget.car.distance+300, fuelCapacity: widget.car.fuelCapacity+300, pricePerHour: widget.car.pricePerHour+30)),
-          //     ],
-          //   ),
-          // )
+          const Spacer(),
+          Container(
+            padding: EdgeInsets.all(
+              20.0,
+            ),
+            child: Column(
+              children: [
+                MoreCard(
+                  car: Car(
+                    model: "${widget.car.model}-1",
+                    distance: widget.car.distance + 100,
+                    fuelCapacity: widget.car.fuelCapacity + 100,
+                    pricePerHour: widget.car.pricePerHour + 10,
+                  ),
+                ),
+                Gap(8.0),
+                MoreCard(
+                  car: Car(
+                    model: "${widget.car.model}-2",
+                    distance: widget.car.distance + 200,
+                    fuelCapacity: widget.car.fuelCapacity + 200,
+                    pricePerHour: widget.car.pricePerHour + 20,
+                  ),
+                ),
+                Gap(8.0),
+                MoreCard(
+                  car: Car(
+                    model: "${widget.car.model}-3",
+                    distance: widget.car.distance + 300,
+                    fuelCapacity: widget.car.fuelCapacity + 300,
+                    pricePerHour: widget.car.pricePerHour + 30,
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
