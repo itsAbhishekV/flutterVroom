@@ -56,7 +56,7 @@ class OnboardingScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         context.go(
-                          HomeScreen.routePath,
+                          CarListingScreen.routePath,
                         );
                       },
                       style: ElevatedButton.styleFrom(

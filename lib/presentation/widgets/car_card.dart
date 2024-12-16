@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vroom/data/exports.dart';
+import 'package:flutter_vroom/presentation/exports.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class CarCard extends StatelessWidget {
   final Car car;
@@ -14,8 +16,13 @@ class CarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        //todo = add route
+        print('pressed');
+        context.pushNamed(
+          CarDetailsScreen.routeName,
+          extra: car.toMap(),
+        );
       },
+      onDoubleTap: () {},
       child: Container(
         margin: EdgeInsets.symmetric(
           vertical: 10.0,

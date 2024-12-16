@@ -8,7 +8,7 @@ final ThemeData appTheme = ThemeData(
     backgroundColor: Colors.white,
     titleTextStyle: TextStyle(
       fontSize: 22.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: Colors.black,
     ),
   ),

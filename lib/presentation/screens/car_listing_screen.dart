@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vroom/data/exports.dart';
-import 'package:flutter_vroom/presentation/widgets/car_card.dart';
+import 'package:flutter_vroom/presentation/exports.dart';
 
 class CarListingScreen extends StatefulWidget {
   static const routeName = 'car-listing';
@@ -58,7 +58,9 @@ class _CarListingScreenState extends State<CarListingScreen> {
         itemCount: cars.length,
         itemBuilder: (context, index) {
           final car = cars[index];
-          return CarCard(car: car);
+          return CarCard(
+            car: car,
+          );
         },
       ),
     );
