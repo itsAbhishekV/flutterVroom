@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vroom/data/exports.dart';
 import 'package:flutter_vroom/presentation/exports.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class CarDetailsScreen extends StatefulWidget {
   final Car car;
@@ -116,7 +117,10 @@ class _CarDetailsScreenState extends State<CarDetailsScreen>
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      //todo - navigate
+                      context.pushNamed(
+                        MapDetailsScreen.routeName,
+                        extra: widget.car.toMap(),
+                      );
                     },
                     child: Container(
                       height: 180.0,

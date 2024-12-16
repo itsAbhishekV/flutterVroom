@@ -31,5 +31,16 @@ final routes = GoRouter(
         );
       },
     ),
+    GoRoute(
+      name: MapDetailsScreen.routeName,
+      path: MapDetailsScreen.routePath,
+      builder: (context, state) {
+        final carMap = state.extra as Map<String, dynamic>;
+        final Car car = Car.fromMap(carMap);
+        return MapDetailsScreen(
+          car: car,
+        );
+      },
+    ),
   ],
 );
