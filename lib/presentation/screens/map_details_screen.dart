@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_vroom/data/exports.dart';
 import 'package:gap/gap.dart'; // Add this package to pubspec.yaml
 import 'package:go_router/go_router.dart';
 import 'package:latlong2/latlong.dart';
-
-import '../../data/models/car.dart';
 
 class MapDetailsScreen extends StatefulWidget {
   final Car car;

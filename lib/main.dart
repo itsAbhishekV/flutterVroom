@@ -1,6 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_vroom/firebase_options.dart';
+import 'package:flutter_vroom/injection_container.dart';
+import 'package:flutter_vroom/presentation/bloc/car_bloc.dart';
+import 'package:flutter_vroom/presentation/bloc/car_events.dart';
 
 import 'core/exports.dart';
 
@@ -11,6 +15,8 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  initInjection();
+
   runApp(MyApp());
 }
 
@@ -19,11 +25,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: appTheme,
-      debugShowCheckedModeBanner: false,
-      title: 'VroomVroom',
-      routerConfig: routes,
+    return BlocProvider(
+      create: (_) => getIt<CarBloc>()..add(LoadCars()),
+      child: MaterialApp.router(
+        theme: appTheme,
+        debugShowCheckedModeBanner: false,
+        title: 'VroomVroom',
+        routerConfig: routes,
+      ),
     );
   }
 }
